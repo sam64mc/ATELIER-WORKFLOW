@@ -1,8 +1,11 @@
 package com.example.sam.gitworkflow;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -42,6 +45,16 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        Button buttonMaps = (Button) findViewById(R.id.buttonMaps);
+        final Intent intent = new Intent(MainActivity.this, MapsActivity.class);
+        buttonMaps.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(intent);
+            }
+        });
+
     }
 
 }
+//
